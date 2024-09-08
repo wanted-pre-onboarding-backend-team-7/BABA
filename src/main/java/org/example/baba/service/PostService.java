@@ -128,17 +128,16 @@ public class PostService {
                   .map(postHashTagMap -> postHashTagMap.getHashtag().getTagName())
                   .collect(Collectors.toList());
 
-          return PostSimpleResponseDto.builder()
-              .id(post.getId())
-              .memberId(post.getMemberId())
-              .type(post.getType())
-              .title(post.getTitle())
-              .content(post.getContent())
-              .likeCount(post.getLikeCount())
-              .viewCount(post.getViewCount())
-              .shareCount(post.getShareCount())
-              .hashTags(hashTags) // 해시태그 포함
-              .build();
+          return new PostSimpleResponseDto(
+              post.getId(),
+              post.getMemberId(),
+              post.getType(),
+              post.getTitle(),
+              post.getContent(),
+              post.getViewCount(),
+              post.getLikeCount(),
+              post.getShareCount(),
+              hashTags);
         });
   }
 }
