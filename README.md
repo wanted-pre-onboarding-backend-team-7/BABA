@@ -128,7 +128,7 @@
 
 </details>
 
-</br>
+<br>
 
 ## 3. 기술 문서
 
@@ -147,7 +147,7 @@
 | **게시물 공유**    | PUT      | `/api/posts/{id}/share` | 게시물을 공유합니다.           |
 | **통계 조회**     | GET      | `/api/stats`            | 게시물 통계 정보를 조회합니다.     |
 
-</br>
+<br>
 
 <details>
 <summary><strong>ERD</strong></summary>
@@ -273,7 +273,7 @@ BABA
 
 </details>
 
-</br>
+<br>
 
 ## 4. 기능 구현
 
@@ -355,7 +355,7 @@ BABA
     </div>
 </details>
 
-</br>
+<br>
 
 ### ⭐ RESTful API
 
@@ -436,22 +436,23 @@ BABA
 <details>
     <summary>구현 의도</summary>
     <div>
-        <div><strong>제목 1</strong></div>
-        <div>내용 1</div>
-        <div><strong>제목 2</strong></div>
-        <div>내용 2</div>
+        <div><strong>1. 기간 내 해당 해시태그가 포함된 게시물을 일자별, 시간별로 제공</strong></div>
+        <div>통계를 확인하고 싶은 해시태그 값 및 type을 DATE로 선택시, "yyyy-MM-dd : count" 형식으로 통계를 조회할 수 있습니다</div>
+        <div>통계를 확인하고 싶은 해시태그 값 및 type을 HOUR로 선택시, "yyyy-MM-dd HH:mm : count" 형식으로 통계를 조회할 수 있습니다</div>
+        <div><strong>2. QueryDSL 사용을 통한 여러 조건이 포함된 동적 쿼리 작성</strong></div>
+        <div>조건(날짜, 해시태그 포함 등)이 있는 쿼리를 유연하게 구성하기 위해 queryDSL를 사용했습니다</div>
     </div>
 </details>
 <details>
     <summary>구현 코드</summary>
     <div>
-        <a href="클래스 주소" target="_blank">클래스 이름</a></br>
-        <a href="클래스 주소" target="_blank">클래스 이름</a></br>
-        <a href="클래스 주소" target="_blank">클래스 이름</a></br>
+        <a href="https://github.com/wanted-pre-onboarding-backend-team-7/BABA/blob/dev/src/main/java/org/example/baba/controller/StatisticsController.java" target="_blank">StatisticsController</a><br>
+        <a href="https://github.com/wanted-pre-onboarding-backend-team-7/BABA/blob/dev/src/main/java/org/example/baba/service/StatisticsService.java" target="_blank">StatisticsService</a><br>
+        <a href="https://github.com/wanted-pre-onboarding-backend-team-7/BABA/blob/dev/src/main/java/org/example/baba/repository/StatisticsRepository.java" target="_blank">StatisticsRepository</a><br>
     </div>
 </details>
 
-</br>
+<br>
 
 ## 5. 트러블 슈팅
 
